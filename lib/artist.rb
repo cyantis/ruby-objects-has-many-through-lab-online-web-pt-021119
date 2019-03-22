@@ -20,7 +20,7 @@ class Artist
   end
 
   def genres
-    Genre.all.select {|g| g.artist == self}
+    Genre.all.select {|g| g.artist == self.name}
   end
 
 end
