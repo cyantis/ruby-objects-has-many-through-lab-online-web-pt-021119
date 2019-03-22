@@ -15,4 +15,8 @@ class Artist
     Song.new(name, genre).tap {|s| s.artist = self}
   end
 
+  def songs
+    Song.all.select {|s| s.artist == self}
+  end
+
 end
