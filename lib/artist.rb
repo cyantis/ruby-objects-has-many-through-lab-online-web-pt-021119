@@ -21,7 +21,8 @@ class Artist
   end
 
   def genres
-    Genre.all.map {|g| g.artist == self}
+    Song.all.find_all {|s| s.artist == self}.collect {|g| g.genre}
+
   end
 
 end
